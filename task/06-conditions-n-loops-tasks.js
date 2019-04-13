@@ -30,6 +30,16 @@
  *
  */
 function getFizzBuzz(num) {
+    if (num % 3 === 0 && num % 5 === 0) {
+        return "FizzBuzz";
+    }
+    else if (num % 5 === 0) {
+        return "Buzz"
+    }
+    else if (num % 3 === 0) {
+        return "Fizz"
+    }
+    else return num;
     throw new Error('Not implemented');
 }
 
@@ -46,6 +56,11 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
+    let factorial = 1;
+    for (let i = 1; i <= n; i += 1) {
+        factorial = factorial * i;
+    }
+    return factorial;
     throw new Error('Not implemented');
 }
 
@@ -63,6 +78,11 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
+    let sum = 0;
+    for (; n1 <= n2; n1 += 1) {
+        sum = sum + n1;
+    }
+    return sum;
     throw new Error('Not implemented');
 }
 
@@ -81,7 +101,11 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(a,b,c) {
+function isTriangle(a, b, c) {
+    if (a + b > c && a + c > b && b + c > a) {
+        return true;
+    }
+    else return false;
     throw new Error('Not implemented');
 }
 
@@ -443,15 +467,15 @@ module.exports = {
     doRectanglesOverlap: doRectanglesOverlap,
     isInsideCircle: isInsideCircle,
     findFirstSingleChar: findFirstSingleChar,
-    getIntervalString : getIntervalString,
+    getIntervalString: getIntervalString,
     reverseString: reverseString,
     reverseInteger: reverseInteger,
     isCreditCardNumber: isCreditCardNumber,
     getDigitalRoot: getDigitalRoot,
     isBracketsBalanced: isBracketsBalanced,
-    timespanToHumanString : timespanToHumanString,
+    timespanToHumanString: timespanToHumanString,
     toNaryString: toNaryString,
     getCommonDirectoryPath: getCommonDirectoryPath,
     getMatrixProduct: getMatrixProduct,
-    evaluateTicTacToePosition : evaluateTicTacToePosition
+    evaluateTicTacToePosition: evaluateTicTacToePosition
 };
