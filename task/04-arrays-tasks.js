@@ -23,6 +23,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
+   return arr.indexOf(value);
    throw new Error('Not implemented');
 }
 
@@ -38,10 +39,10 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   // let mas = [];
-   // for (var i = 1; i <= len; i += 2) {
-   //    mas.push(i);
-   // }
+   //  let mas = [];
+   //  for (var i = 1; i <= len; i += 2) {
+   //     mas.push(i);
+   //  }
    throw new Error('Not implemented');
 }
 
@@ -74,6 +75,10 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
+   var positiveArr = arr.filter(function(number) {
+      return number > 0;
+    });
+    return positiveArr;
    throw new Error('Not implemented');
 }
 
@@ -89,6 +94,10 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
+   var positiveArr = arr.filter(function(strArr) {
+      return (Object.prototype.toString.call(strArr) == '[object String]');
+    });
+   return positiveArr;
    throw new Error('Not implemented');
 }
 
